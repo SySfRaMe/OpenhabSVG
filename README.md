@@ -6,9 +6,11 @@ I got the idea from Word, where it is possible to add icons and later assign col
    Files for controlling the colors/items located at items/SVG.items.
 2) Representation of the Image In HTML
    Located at html/boiler.html.
-3) Script for Updating the Item:
+4) Script for Updating the Item:
    Located at automation/js/boilerSVG.js
-4) Lastly you will need to create an widget like so:
+   this script will alter the url of the boiler.html with new attributes corresponding to the actual boiler temperature like so:
+   "boiler.html?offset1=25%&offset2=100%&color1=red&color2=blue"
+6) Lastly you will need to create an widget like so:
   a) navigate to the navigate to the dashboard and goto Development tools
   b) select widgets
   c) create new widget and paste below code in:

@@ -10,3 +10,5 @@ I got the idea from Word, where it is possible to add icons and later assign col
    Located at automation/js/boilerEventCng.js
 
 Please note that I am by no means a professional in this field, but I am eager to learn! (-; This project might end up in the trash bin, but let's see what happens.
+
+Try it out it is a lot of fun and has great potential

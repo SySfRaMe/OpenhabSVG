@@ -1,3 +1,7 @@
 String BoilerURL "URL to Boiler image"  //example= http://localhost:8080/static/boiler.html?offset1=10%&offset2=100%&color1=Red&color2=#00FF00
 Number BoilerLEVEL "Boiler level" // 0-100%
 Number BoilerTemperature "Temperature in boiler" { channel="mqtt:topic:mything:Fyr_Fremlob" } //remember to alter channel
+//Buffer Items
+String BufferURL "URL to Buffer image"
+Number BufferLEVEL "Buffer level" // 0-100%
+Number BufferTemperature "Temperature in buffer"

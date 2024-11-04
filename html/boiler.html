@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Gradient Control</title>
+    <style>
+        .stove {
+            cursor: pointer; /* Gør SVG'en klikbar */
+        }
+    </style>
+</head>
+<body>
+
+<svg id="stoveSvg" width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="greenToRed" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: green; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: red; stop-opacity: 1" />
+        </linearGradient>
+    </defs>
+	<!-- url(#greenToRed)-->
+    <rect x="40" y="60" width="120" height="180" fill="url(#greenToRed)" class="stove" rx="15" />
+    <rect x="60" y="100" width="80" height="100" fill="none" stroke-width="4" stroke="black" />
+    <rect x="70" y="110" width="60" height="80" fill="rgba(0, 0, 0, 0.2)" />
+    <rect x="135" y="140" width="8" height="20" rx="2" fill="black" />
+    <rect x="80" y="30" width="40" height="40" fill="black" rx="5" />
+    <line x1="60" y1="160" x2="140" y2="160" stroke="black" stroke-width="2" />
+    <line x1="60" y1="175" x2="140" y2="175" stroke="black" stroke-width="2" />
+</svg>
+
+<script>
+    // Funktion til at hente URL-parametre
+    function getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Hent parametre fra URL
+    const offset1 = getUrlParameter('offset1') || '0%';
+    const offset2 = getUrlParameter('offset2') || '100%';
+    const color1 = getUrlParameter('color1') || 'green';
+    const color2 = getUrlParameter('color2') || 'red';
+
+    // Ændre gradienten baseret på URL-parametre
+    function setGradient() {
+        const gradient = document.getElementById('greenToRed');
+        const stops = gradient.getElementsByTagName('stop');
+
+        stops[0].setAttribute('offset', offset1);
+        stops[0].setAttribute('style', `stop-color: ${color1}; stop-opacity: 1`);
+        
+        stops[1].setAttribute('offset', offset2);
+        stops[1].setAttribute('style', `stop-color: ${color2}; stop-opacity: 1`);
+    }
+
+    // Kald funktionen for at sætte gradienten
+    setGradient();
+</script>
+
+</body>
+</html>

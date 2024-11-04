@@ -1,0 +1,4 @@
+String BoilerIMG_URL "URL to Boiler image"  //example= http://localhost:8080/static/boiler.html?offset1=10%&offset2=100%&color1=Red&color2=#00FF00
+Number BoilerIMG_LEVEL "Gradient level for Boiler image" // 0-100%
+Number BoilerIMG_COLOR1 "Top Gradient color for Boiler image" // alternativly can be static i script
+Number BoilerIMG_COLOR2 "Bottom Gradient color for Boiler image" // alternativly can be static i script

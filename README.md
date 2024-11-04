@@ -1,10 +1,8 @@
 # OpenhabSVG
-Create an dynamic SVG representation
-So i got the idea from word where it is possible to add Icons and give them color attributes afterwards.
-I wanted to illustrate changes in temperature in my boiler and ultimative my entire house heating system.
-Currently the repos include 3 elements for you to use:
-1) the item definitions files for controlling the the colors /items/svg.items (currently not implemented)
-2) the reprensation of to image "in html" /html/static/boiler.html (currently not implemented)
-3) script for updating the item (currently not implemented)
-please note i am by no means proffesionel at what i do but im eager to learn (-;
-This project might end in the trashbin, lets see....
+Create a Dynamic SVG Representation
+I got the idea from Word, where it is possible to add icons and later assign color attributes to them. I wanted to illustrate changes in temperature in my boiler and ultimately my entire house heating system. Currently, the repository includes three elements for you to use:
+
+Item Definitions: Files for controlling the colors/items located at items/svg.items (currently not implemented).
+Representation of the Image: In HTML, located at html/static/boiler.html (currently not implemented).
+Script for Updating the Item: This is also currently not implemented.
+Please note that I am by no means a professional in this field, but I am eager to learn! (-; This project might end up in the trash bin, but let's see what happens.

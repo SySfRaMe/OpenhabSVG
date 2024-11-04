@@ -5,7 +5,7 @@ I got the idea from Word, where it is possible to add icons and later assign col
 1) Item Definitions
    Files for controlling the colors/items located at items/SVG.items.
 3) Representation of the Image In HTML
-   Located at html/static/boiler.html.
+   Located at html/boiler.html.
 3) Script for Updating the Item:
    Located at automation/js/boilerSVG.js
 

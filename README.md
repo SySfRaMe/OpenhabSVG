@@ -9,7 +9,9 @@ I got the idea from Word, where it is possible to add icons and later assign col
 4) Script for Updating the Item:
    Located at automation/js/boilerSVG.js
    this script will alter the url of the boiler.html with new attributes corresponding to the actual boiler temperature like so:
+   ```
    "boiler.html?offset1=25%&offset2=100%&color1=red&color2=blue"
+   ```
 6) Lastly you will need to create an widget like so:
   a) navigate to the navigate to the dashboard and goto Development tools
   b) select widgets

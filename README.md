@@ -14,7 +14,7 @@ I got the idea from Word, where it is possible to add icons and later assign col
   a) navigate to the navigate to the dashboard and goto Development tools
   b) select widgets
   c) create new widget and paste below code in:
-#widget code start
+```
 uid: BOILERDYN
 tags: []
 props:
@@ -28,7 +28,7 @@ config:
   title: Boiler
   footer: =items.BoilerLEVEL.state + '% ~' + items.BoilerTemperature.state + ' C°'
   borders: true
-#widget code end
+```
 
 Please note that I am by no means a professional in this field, but I am eager to learn! (-; This project might end up in the trash bin, but let's see what happens.
 Try it out it is a lot of fun and has great potential

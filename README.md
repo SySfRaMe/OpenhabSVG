@@ -14,8 +14,8 @@ I got the idea from Word, where it is possible to add icons and later assign col
   a) navigate to the navigate to the dashboard and goto Development tools
   b) select widgets
   c) create new widget and paste below code in:
-#widget code start
-uid: BOILERDYN
+```
+uid: BoilerWidget
 tags: []
 props:
   parameters: []
@@ -28,7 +28,23 @@ config:
   title: Boiler
   footer: =items.BoilerLEVEL.state + '% ~' + items.BoilerTemperature.state + ' C°'
   borders: true
-#widget code end
+```
+And for Buffer:
+```
+uid: BufferWidget
+tags: []
+props:
+  parameters: []
+  parameterGroups: []
+timestamp: Nov 4, 2024, 9:48:24 PM
+component: oh-webframe-card
+config:
+  src: =items.BufferURL.state
+  height: 400
+  title: Boiler
+  footer: =items.BufferLEVEL.state + '% ~' + items.BufferTemperature.state + ' C°'
+  borders: true
+```
 
 Please note that I am by no means a professional in this field, but I am eager to learn! (-; This project might end up in the trash bin, but let's see what happens.
 Try it out it is a lot of fun and has great potential

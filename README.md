@@ -15,6 +15,7 @@ I got the idea from Word, where it is possible to add icons and later assign col
   b) select widgets
   c) create new widget and paste below code in:
 ```
+
 uid: BoilerWidget
 tags: []
 props:

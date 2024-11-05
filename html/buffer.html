@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Gradient Control</title>
+    <style>
+        .stove {
+            cursor: pointer; /* Gør SVG'en klikbar */
+        }
+    </style>
+</head>
+<body>
+
+<svg id="bufferSvg" width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="greenToRed" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: green; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: red; stop-opacity: 1" />
+        </linearGradient>
+    </defs>
+	<!-- url(#greenToRed)-->
+    <rect x="36" y="56" width="128" height="188" fill="Black" class="stove" rx="48" />
+    <rect x="40" y="60" width="120" height="180" fill="url(#greenToRed)" class="stove" rx="45" />
+</svg>
+
+<script>
+    // Funktion til at hente URL-parametre
+    function getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Hent parametre fra URL
+    const offset1 = getUrlParameter('offset1') || '0%';
+    const offset2 = getUrlParameter('offset2') || '100%';
+    const color1 = getUrlParameter('color1') || 'green';
+    const color2 = getUrlParameter('color2') || 'red';
+
+    // Ændre gradienten baseret på URL-parametre
+    function setGradient() {
+        const gradient = document.getElementById('greenToRed');
+        const stops = gradient.getElementsByTagName('stop');
+
+        stops[0].setAttribute('offset', offset1);
+        stops[0].setAttribute('style', `stop-color: ${color1}; stop-opacity: 1`);
+        
+        stops[1].setAttribute('offset', offset2);
+        stops[1].setAttribute('style', `stop-color: ${color2}; stop-opacity: 1`);
+    }
+
+    // Kald funktionen for at sætte gradienten
+    setGradient();
+</script>
+
+</body>
+</html>
